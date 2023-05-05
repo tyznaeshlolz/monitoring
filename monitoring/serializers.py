@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Gate, OSUser
+from .models import Gate, OSUser, VisitLog
 
 
 class OSUserSerializer(serializers.ModelSerializer):
@@ -17,4 +17,11 @@ class GateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Gate
+        fields = '__all__'
+
+
+class VisitLogSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = VisitLog
         fields = '__all__'
